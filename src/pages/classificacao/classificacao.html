@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Classificação</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>ANO</ion-label>
+            <ion-select [(ngModel)]="ANO">
+                <ion-option value="1">1</ion-option>                    
+                <ion-option value="2">2</ion-option>
+                <ion-option value="3">3</ion-option>
+                <ion-option value="4">4</ion-option>
+                <ion-option value="5">5</ion-option>
+            </ion-select> 
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>SEMESTRE</ion-label>
+            <ion-select [(ngModel)]="SEMESTRE">
+                <ion-option value="1">1</ion-option>                    
+                <ion-option value="2">2</ion-option>
+            </ion-select> 
+        </ion-item>
+    </ion-list>
+
+      <ion-list radio-group [(ngModel)]="notas">
+          <ion-item>
+            <ion-label>Média Geral</ion-label>
+            <ion-radio item-start value="mediaGeral" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Nota Classificação Final</ion-label>
+            <ion-radio item-start value="notaFinal"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Média Militar</ion-label>
+            <ion-radio item-start value="mediaMilitar" [disabled]="isDisabled"></ion-radio>
+          </ion-item>
+      </ion-list>
+
+      <input type="submit" value="Enviar"  (click)="classificacaoNewPage()"/>
+      <input type="reset" value="Cancelar" />  
+  </ion-content>
+

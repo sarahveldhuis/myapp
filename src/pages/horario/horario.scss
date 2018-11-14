@@ -1,0 +1,16 @@
+#barraVertical{
+    height: 300px;
+    width: 450px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#barraHorizontal{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 200px;
+    white-space:nowrap;
+}
+
+
+   

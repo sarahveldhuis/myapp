@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Horário</ion-title>
+      <button ion-button menuToggle end>
+          <ion-icon name="more"></ion-icon>
+        </button>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+      <button ion-button>SEG</button>
+      <button ion-button>TER</button>
+      <button ion-button>QUA</button>
+      <button ion-button>QUI</button>
+      <button ion-button>SEX</button>
+    
+    <div>
+    <ion-list>
+      <ion-navbar>
+        <ion-title>Probabilidade</ion-title>
+        <div menuClose ion-item *ngFor="let d1 of disciplina1">
+          <ion-icon [name]='d1.icon' item-start></ion-icon>
+         {{d1.title}}
+        </div>
+    </ion-navbar>
+    </ion-list>
+
+
+    <ion-list>
+        <ion-navbar>
+          <ion-title>Cálculo</ion-title>
+          <div menuClose ion-item *ngFor="let d2 of disciplina2">
+            <ion-icon [name]='d2.icon' item-start></ion-icon>
+           {{d2.title}}
+          </div>
+      </ion-navbar>
+      </ion-list>
+
+
+      <ion-list>
+          <ion-navbar>
+            <ion-title>Física</ion-title>
+            <div menuClose ion-item *ngFor="let d3 of disciplina3">
+              <ion-icon [name]='d3.icon' item-start></ion-icon>
+             {{d3.title}}
+            </div>
+        </ion-navbar>
+        </ion-list>
+
+
+        <ion-list>
+            <ion-navbar>
+              <ion-title>Resistência Materiais</ion-title>
+              <div menuClose ion-item *ngFor="let d4 of disciplina4" div>
+                <ion-icon [name]='d4.icon' item-start></ion-icon>
+               {{d4.title}}
+              </div>
+          </ion-navbar>
+          </ion-list>
+
+    <ion-scroll id="barraVertical"></ion-scroll>
+  </div>
+  </ion-content>
+  
