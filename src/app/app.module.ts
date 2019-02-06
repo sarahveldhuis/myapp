@@ -19,6 +19,8 @@ import { Calendar } from '@ionic-native/calendar';
 import { ImeJuniorPage } from './../pages/ime-junior/ime-junior';
 
 import { BoletimService } from './../pages/boletim/boletim.service';
+import { ClassificacaoNewService } from './../pages/classificacao-new/classificacao-new.service';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -70,6 +72,7 @@ import { ServicoPage } from '../pages/servico/servico';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Calendar,
     BoletimService,
+    ClassificacaoNewService,
   ]
 })
 export class AppModule {}
