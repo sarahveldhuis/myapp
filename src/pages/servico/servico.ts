@@ -6,6 +6,9 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'servico.html'
 })
 export class ServicoPage {
+  slideOpts = {
+    effect: 'flip'
+  };
 
   constructor(public navCtrl: NavController) {
 

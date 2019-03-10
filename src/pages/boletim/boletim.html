@@ -9,13 +9,22 @@
 </ion-header>
 
 <ion-content padding>
-  
-        <button ion-button>2018.2</button>
-        <button ion-button>2018.1</button>
-        <button ion-button>2017.2</button>
-        <button ion-button>2017.1</button>
+  <ion-scroll scrollX = "true" style="height: 100px">
+    <div class = "inner">
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+      <ion-card><button ion-button>2018.2</button></ion-card>
+
+    </div>
+  </ion-scroll>
 
   <ion-list>
+    
     <ion-navbar *ngFor="let sem of boletim" >
       <button menuClose ion-item *ngFor="let item of sem.disciplinas" (click)="disciplinaPage()">
         <ion-title>{{ item.title }}</ion-title>
