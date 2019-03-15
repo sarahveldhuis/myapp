@@ -1,13 +1,31 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Configurações</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-item>
+          <ion-label ><ion-icon name="notifications"></ion-icon>&emsp;&emsp;NOTIFICAÇÕES</ion-label>
+          <ion-select [(ngModel)]="NOT">
+              <ion-option value="1">ON</ion-option>                    
+              <ion-option value="2">OFF</ion-option>
+          </ion-select> 
+      </ion-item>
+      <button ion-item *ngFor= "let item of lista1" (click)="Senha()">
+            <ion-icon [name] = "item.icon" item-start></ion-icon>
+            {{item.title}}
       </button>
-      <ion-title>Configurações</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-    <h3>configurações works!</h3>
-  </ion-content>
-  
+      <button ion-item *ngFor= "let item of lista2" (click)="Info()">
+          <ion-icon [name] = "item.icon" item-start></ion-icon>
+          {{item.title}}
+    </button>
+        
+  </ion-list>
+    <input type="reset" value="SAIR" />  
+</ion-content>

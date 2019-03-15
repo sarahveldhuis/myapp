@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Informações Pessoais</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+      <h3><ion-item>
+            <ion-avatar item-right>
+              <img src="../assets/imgs/foto_ana_e_sarah.jpg">
+            </ion-avatar>
+          </ion-item></h3>
+    <ion-list>
+        <ion-item>
+          <ion-input type = "name" placeholder = "Nome*" clearInput= "true" autocomplete="on" ></ion-input>
+        </ion-item>
+        <ion-item>
+                <ion-input type = "email" placeholder = "E-mail*"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type = "name" placeholder = "Telefone"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type = "name" placeholder = "Nome de Guerra"></ion-input>
+          </ion-item>
+          <ion-item>
+                <ion-label ><ion-icon name="sunny"></ion-icon>&emsp;&emsp;Seção de Ensino</ion-label>
+                <ion-select [(ngModel)]="SECAO">
+                    <ion-option value="SE/1">SE/1</ion-option>                    
+                    <ion-option value="SE/2">SE/2</ion-option>
+                    <ion-option value="SE/3">SE/3</ion-option>
+                    <ion-option value="SE/4">SE/4</ion-option>
+                    <ion-option value="SE/5">SE/5</ion-option>
+                    <ion-option value="SE/6">SE/6</ion-option>
+                    <ion-option value="SE/7">SE/7</ion-option>
+                    <ion-option value="SE/8">SE/8</ion-option>
+                    <ion-option value="SE/9">SE/9</ion-option>
+                </ion-select> 
+            </ion-item>
+            <ion-item>
+                    <ion-label>Ano</ion-label>
+                    <ion-select [(ngModel)]="ANO">
+                        <ion-option value="1">1</ion-option>                    
+                        <ion-option value="2">2</ion-option>
+                        <ion-option value="3">3</ion-option>
+                        <ion-option value="4">4</ion-option>
+                        <ion-option value="5">5</ion-option>
+                    </ion-select> 
+            </ion-item>
+            <ion-item>
+                        <ion-label ><ion-icon name="contacts"></ion-icon>&emsp;&emsp;Situação Militar</ion-label>
+                        <ion-select [(ngModel)]="SM">
+                            <ion-option value="1">ATIVA</ion-option>                    
+                            <ion-option value="2">RESERVA</ion-option>
+                        </ion-select> 
+            </ion-item>
+        <br>
+        <button ion-button block (click)="homePage()">ALTERAR CADASTRO</button>
+        <br><br>
+      </ion-list>
+  </ion-content>
+  

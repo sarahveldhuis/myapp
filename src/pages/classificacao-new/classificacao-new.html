@@ -12,22 +12,5 @@
   </ion-header>
   
   <ion-content padding>
-    <ion-list>
-      <ion-navbar *ngFor="let cla of classificacao">
-        <ion-card *ngFor="let aluno of cla.alunos">
-          <ion-row>
-            <ion-col col-2>{{ aluno.classif }}</ion-col>
-            <ion-col>{{ aluno.nome }}</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>{{ aluno.especialidade }}</ion-col>
-            <ion-col>{{ aluno.carreira }}</ion-col>
-            <ion-col>{{ aluno.curso }}</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col *ngFor="let nota of aluno.notas">{{ nota.title }} : {{ nota.note }}</ion-col>
-          </ion-row>
-        </ion-card>
-      </ion-navbar>
-    </ion-list>
+      <p>Classificação</p>
   </ion-content>

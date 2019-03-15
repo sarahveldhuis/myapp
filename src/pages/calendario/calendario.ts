@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController, NavParams } from 'ionic-angular';
+import { NavController, AlertController, ToastController, NavParams } from 'ionic-angular';
 import { Calendar } from '@ionic-native/calendar';
 
 
@@ -21,7 +21,9 @@ export class CalendarioPage {
   currentYear: any;
   currentDate: any;
 
-  constructor(public navCtrl: NavController,public calendar: Calendar, public toastCtrl: ToastController, public navParams: NavParams) {}
+  constructor(private alertCtrl: AlertController,
+    public navCtrl: NavController,
+    private calendar: Calendar, public toastCtrl: ToastController, public navParams: NavParams) {}
 
 
     ionViewDidLoad() {

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Alterar Senha</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-input type = "email" placeholder = "Insira sua senha atual" clearInput= "true" autocomplete="on" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type = "password" placeholder = "Insira a nova Senha"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type = "password" placeholder = "Repita a nova Senha"></ion-input>
+          </ion-item>
+        <br>
+        <button ion-button block (click)="homePage()">ALTERAR SENHA</button>
+        <br><br>
+        <button ion-button clear small block>ESQUECI MINHA SENHA ATUAL</button>
+      </ion-list>
+  </ion-content>
+  
